@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import Post from '../Posts/Posts';
+import Post from '../Post/Post';
 
 class PostList extends Component {
     state = {
@@ -10,7 +10,7 @@ class PostList extends Component {
 
     componentDidUpdate () {
         if(this.props.userSelected) {
-            if(!this.state.loadedPosts || (this.state.loadedPosts && this.state.loadedPosts.userid !== this.props.userSelected.id) )  {
+            if(!this.state.loadedPosts || (this.state.loadedPosts && this.state.loadedPosts.userId !== this.props.userSelected.id) )  {
                 axios.get('https://jsonplaceholder.typicode.com/users/' + this.props.userSelected.id + '/posts') 
                     .then(response => {
                         console.log(response)
