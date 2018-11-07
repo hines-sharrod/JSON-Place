@@ -10,10 +10,10 @@ class PostList extends Component {
 
     componentDidUpdate () {
         if(this.props.userSelected) {
-            if(!this.state.loadedPosts)  {
-                axios.get('https://jsonplaceholder.typicode.com/users/' + this.props.userSelected.id + '/posts')
+            if(!this.state.loadedPosts || (this.state.loadedPosts && this.state.loadedPosts.userid !== this.props.userSelected.id) )  {
+                axios.get('https://jsonplaceholder.typicode.com/users/' + this.props.userSelected.id + '/posts') 
                     .then(response => {
-                        console.log(this.state.loadedPosts);
+                        console.log(response)
                         this.setState({loadedPosts: response.data})
                     })
             }
@@ -24,6 +24,12 @@ class PostList extends Component {
         console.log(loadedPosts)
 
         let post = null;
+
+        if (this.props.userSelected) {
+            post = (
+                <p style={{textAlign: 'center'}}>Loading...!</p>
+            )
+        }
 
         if (loadedPosts) {
             post = loadedPosts.map(post => {
