@@ -13,7 +13,6 @@ class PostList extends Component {
             if(!this.state.loadedPosts || (this.state.loadedPosts && this.state.loadedPosts.userId !== this.props.userSelected.id) )  {
                 axios.get('https://jsonplaceholder.typicode.com/users/' + this.props.userSelected.id + '/posts') 
                     .then(response => {
-                        console.log(response)
                         this.setState({loadedPosts: response.data})
                     })
             }

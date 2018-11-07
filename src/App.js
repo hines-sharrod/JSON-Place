@@ -43,7 +43,7 @@ class App extends Component {
           name={userSelected.name}
           username={userSelected.username}
           email={userSelected.email}
-          // address={userSelected.address}
+          address={userSelected.address.street + ' ' + userSelected.address.suite + ', ' + userSelected.address.city + ' ' + userSelected.address.zipcode}
           phone={userSelected.phone}
           website={userSelected.website}
           company={userSelected.company.name + ' (' + userSelected.company.catchPhrase + ')'}
