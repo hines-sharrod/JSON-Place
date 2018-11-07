@@ -1,15 +1,15 @@
 {
-  "main.css": "/JSON-Place/static/css/main.41d3cba8.chunk.css",
-  "main.js": "/JSON-Place/static/js/main.bf1fd0ba.chunk.js",
-  "main.js.map": "/JSON-Place/static/js/main.bf1fd0ba.chunk.js.map",
+  "main.css": "/JSON-Place/static/css/main.090d24ad.chunk.css",
+  "main.js": "/JSON-Place/static/js/main.81c8bb17.chunk.js",
+  "main.js.map": "/JSON-Place/static/js/main.81c8bb17.chunk.js.map",
   "static/js/1.3bd301b8.chunk.js": "/JSON-Place/static/js/1.3bd301b8.chunk.js",
   "static/js/1.3bd301b8.chunk.js.map": "/JSON-Place/static/js/1.3bd301b8.chunk.js.map",
   "runtime~main.js": "/JSON-Place/static/js/runtime~main.58f45103.js",
   "runtime~main.js.map": "/JSON-Place/static/js/runtime~main.58f45103.js.map",
-  "static/css/main.41d3cba8.chunk.css.map": "/JSON-Place/static/css/main.41d3cba8.chunk.css.map",
+  "static/css/main.090d24ad.chunk.css.map": "/JSON-Place/static/css/main.090d24ad.chunk.css.map",
   "static/media/jp-logo.png": "/JSON-Place/static/media/jp-logo.415c4e22.png",
   "static/media/App.scss": "/JSON-Place/static/media/json-place.880b22fd.jpeg",
   "index.html": "/JSON-Place/index.html",
-  "precache-manifest.358232888f43462287d06193a7236fc9.js": "/JSON-Place/precache-manifest.358232888f43462287d06193a7236fc9.js",
+  "precache-manifest.7fcf69f2a6b200697af563aa82d03558.js": "/JSON-Place/precache-manifest.7fcf69f2a6b200697af563aa82d03558.js",
   "service-worker.js": "/JSON-Place/service-worker.js"
 }
