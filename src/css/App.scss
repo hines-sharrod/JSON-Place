@@ -1,10 +1,77 @@
-.row {
-    width: 100%;
+//App Styling
+.App {
+
+    .row {
+        float: left;
+        width: 100%;
+    }
+    
+    .one-fourth {
+        float: left;
+        width: 25%;
+    }
+    
+    .one-third {
+        float: left;
+        width: 33%;
+    }
+    
+    .one-half {
+        float: left;
+        width: 50%;
+    }
+    
+    .two-thirds {
+        float: left;
+        width: 67%;
+    }
+    
+    .main {
+        float: left;
+        width: 70%;
+        height: auto;
+    }
+    
+    .sidebar {
+        float: left;
+        width: 30%;
+        height: auto;
+    }
+    .user-select{
+        height: 140px;
+        margin: 15px;
+        label, select {
+            display: inline-block;
+        }
+        select {
+            width: 200px;
+            font-size: 1.1em;
+        }
+    }
 }
+
+// End of App Styling
 
 // Header Component Styling
 .header {
-    h1 {
-        color: blue;
+    width: 100%;
+    .nav {
+        padding: 0 15px;
+        height: 140px;
+        .logo{
+            font-family: 'cursive';
+            max-width: 150px;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .headerImage {
+        height: 300px;
+        background-image: url('../img/json-place.jpeg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
+// End of Header Component Styling

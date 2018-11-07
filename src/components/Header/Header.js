@@ -1,12 +1,16 @@
 import React from 'react';
 import '../../css/App.scss';
+import logo from '../../img/jp-logo.png';
 
-const Header = () => {
+const Header = ({userOptions, userValue}) => {
     return(
         <div className="header">
-            <div className="row">
-                <h1>Hello World!</h1>
+            <div className="nav">
+                <div>
+                    <img className="logo" src={logo} alt="JSON Place Logo"/>
+                </div>
             </div>
+            <div className="headerImage row"></div>
         </div>
     )
 }
