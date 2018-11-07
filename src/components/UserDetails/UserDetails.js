@@ -19,16 +19,16 @@ const UserDetails = ({
             <div>
                 <ul>
                     <li>
-                        Email: {email}
+                        Email: <a href={'mailto:' + email}> {email} </a>
                     </li>
                     <li>
                         Address: {address}
                     </li>
                     <li>
-                        Phone: {phone}
+                        Phone: <a href={'tel:' + phone} > {phone} </a>
                     </li>
                     <li>
-                        Website: {website}
+                        Website: <a href={'http://' + website} target="_blank" rel="noopener noreferrer">{website}</a>
                     </li>
                     <li>
                         Company: {company}

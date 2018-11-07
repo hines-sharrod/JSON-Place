@@ -50,7 +50,8 @@ class App extends Component {
         />
       )
     }
-  
+
+    console.log(userValue)
 
     return (
       <div className="App">
@@ -65,7 +66,7 @@ class App extends Component {
         </form>
         <main className="main">
           <PostList 
-            // posts={}
+            userSelected={userSelected}
           />
         </main>
         <aside className="sidebar">
