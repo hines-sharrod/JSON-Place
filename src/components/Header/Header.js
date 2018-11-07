@@ -8,9 +8,9 @@ const Header = ({userOptions, userValue}) => {
             <div className="nav">
                 <div>
                     <img className="logo" src={logo} alt="JSON Place Logo"/>
-                </div>
+                </div> 
             </div>
-            <div className="headerImage row"></div>
+            <div className="headerImage"></div>
         </div>
     )
 }

@@ -1,11 +1,5 @@
 //App Styling
 .App {
-
-    .row {
-        float: left;
-        width: 100%;
-    }
-    
     .one-fourth {
         float: left;
         width: 25%;
@@ -37,14 +31,16 @@
         width: 30%;
         height: auto;
     }
+
     .user-select{
-        height: 140px;
-        margin: 15px;
+        margin: 15px auto;
+        font-size: 1.1em;
+        width: 360px;
         label, select {
             display: inline-block;
         }
         select {
-            width: 200px;
+            width: auto;
             font-size: 1.1em;
         }
     }
@@ -54,7 +50,6 @@
 
 // Header Component Styling
 .header {
-    width: 100%;
     .nav {
         padding: 0 15px;
         height: 140px;
@@ -75,3 +70,25 @@
     }
 }
 // End of Header Component Styling
+
+// User Detail Component Styling
+.user-details-card {
+    text-align: center;
+    padding: 20px 20px 30px 20px;
+    border: 1px solid #e0e0e0;
+    h3 {
+        font-family: "Montserrat",sans-serif;
+        padding-bottom: 10px;
+    }
+    span {
+        padding-bottom: 10px;
+        font-size: 14px;
+        display: inline-block;
+        text-transform: uppercase;
+        color: #0078D7;
+    }
+    li{
+        list-style: none;
+        text-justify: left;
+    }
+}
