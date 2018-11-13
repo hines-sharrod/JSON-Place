@@ -20,7 +20,7 @@ class App extends Component {
     getUsers = () => {
         API.get('users')
             .then(response => {
-                this.setState({users: response.data})        
+                    this.setState({users: response.data})    
                 })
     }
 
@@ -35,7 +35,7 @@ class App extends Component {
             <option key={user.id} value={user.id}>{user.name}</option>
         ))
 
-        const userSelected = users.find(user => user.id === userValue);
+        const userSelected = users.find(user => user.id === parseInt(userValue));
         console.log(userSelected);
 
         return (
@@ -52,7 +52,7 @@ class App extends Component {
                     </div> 
                     <div class="one-half column">
                         <UserDetails 
-                            details={UserDetails}
+                            details={userSelected}
                         />
                     </div>
                 </div>
