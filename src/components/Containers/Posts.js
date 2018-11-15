@@ -6,33 +6,43 @@ class Posts extends Component {
     constructor(props){
         super(props);
         this.state = {
-            posts: []
+            posts: [],
+            comments: []
         }
     }
 
     getPosts = (userID) => {
-        API.get(`user/${userID}/posts`)
+        API.get(`posts?userId=${userID}`)
             .then(response => {
                 this.setState({posts: response.data})    
             })
     }
+    
+    // getComments = (userID) => {
+    //     API.get(`comments?postId=${userID}`)
+    //         .then(response => {
+    //             this.setState({comments: response.data})
+    //         })
+    // }
 
     componentDidUpdate(prevProps) {
         // Typical usage (don't forget to compare props):
         if (this.props.userSelected.id !== prevProps.userSelected.id) {
             this.getPosts(this.props.userSelected.id)
+            // this.getComments(this.props.userSelected.id)
         }
-        console.log(this.state.posts);
     }
 
     render() {
         const {posts} = this.state
+        console.log(this.state.comments)
 
         const displayPosts = posts.map(post => {
             return (
-                <div>
+                <div key={post.id}>
                     <h3>{post.title}</h3>
                     <p>{post.body}</p>
+                    {/* <p>Comments: {this.state.comments.length}</p> */}
                 </div>
             )
         })
