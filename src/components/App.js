@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/skeleton.scss';
-import API from '../api';
+import API from '../API';
 import Posts from './Containers/Posts';
 import UserDetails from './Presentation/UserDetails';
 
