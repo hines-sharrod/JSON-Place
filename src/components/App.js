@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../assets/skeleton.scss';
+import '../assets/App.scss';
 import API from '../API';
 import Posts from './Containers/Posts';
 import UserDetails from './Presentation/UserDetails';
@@ -48,12 +48,12 @@ class App extends Component {
                     </select>
                 </div>
                 <div className="row">
-                    <div class="one-half column">
+                    <div class="eight columns">
                         <Posts 
                             userSelected={userSelected}
                         />
                     </div> 
-                    <div class="one-half column">
+                    <div class="four columns">
                         <UserDetails 
                             userSelected={userSelected}
                         />
