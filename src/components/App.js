@@ -8,7 +8,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userValue: 'defaultUser',
+            userValue: '',
             users: []
         };
     }
@@ -20,8 +20,8 @@ class App extends Component {
     getUsers = () => {
         API.get('users')
             .then(response => {
-                    this.setState({users: response.data})    
-                })
+                this.setState({users: response.data})    
+            })
     }
 
     componentDidMount() {
@@ -34,25 +34,28 @@ class App extends Component {
         const userOptions = users.map(user => (
             <option key={user.id} value={user.id}>{user.name}</option>
         ))
-
-        const userSelected = users.find(user => user.id === parseInt(userValue));
-        console.log(userSelected);
-
+        
+        /* userSelected finds the selected user from the dropdown by matching the id of the user from the users array with the id value coming from the dropdown value */
+        const userSelected = userValue > 0 && userValue !== '' ? 
+        users.find(user => user.id === parseInt(userValue)) : {};
+        
         return (
             <div className='App'>
                 <div className="row">
                     <select value={userValue} onChange={this.selectChangeHandler}>
-                        <option disabled value="defaultUser">Select a User</option>
+                        <option disabled value=''>Select a User</option>
                         {userOptions}
                     </select>
                 </div>
                 <div className="row">
                     <div class="one-half column">
-                        <Posts />
+                        <Posts 
+                            userSelected={userSelected}
+                        />
                     </div> 
                     <div class="one-half column">
                         <UserDetails 
-                            details={userSelected}
+                            userSelected={userSelected}
                         />
                     </div>
                 </div>
